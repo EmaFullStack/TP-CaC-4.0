@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>prueba pagina</title>
-    <link rel="stylesheet" href="reset.css">
+    <!-- <link rel="stylesheet" href="reset.css"> -->
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <header>
-        <nav>
+        <div class="header-logo">
+            <img src="img/logo.png" alt="logo">
+        </div>
+
+        <nav class="header-menubar">
             <ul>
                 <li><a href="#">Inicio</a></li>
-                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Series</a></li>
                 <li><a href="#">Nosotros</a></li>
                 <li><a href="#">Contacto</a></li>
             </ul>
@@ -22,9 +31,33 @@
     </header>
 
     <main>
-        <div class="container">
-       
+        <div class="contenido-ppal">
+            <section class="secciones">
+                <img src="img/deathgif.gif" alt="">
+            </section>
+            <section class="secciones">
+                <article>
+                    <img src="img/death-note.webp" alt="death-note">
+                    <div>
+                        <h2>Death Note</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti itaque, rem quae architecto
+                            natus, quos deserunt odit nisi, aliquam at id optio eius aperiam facere. Ut repellat ipsa
+                            tempore reiciendis!</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="img/naruto.webp" alt="naruto">
+                    <div>
+                        <h3>Naruto el mejor ninja</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti itaque, rem quae architecto
+                            natus, quos deserunt odit nisi, aliquam at id optio eius aperiam facere. Ut repellat ipsa
+                            tempore reiciendis!</p>
+                    </div>
+                </article>
+            </section>
         </div>
+
+        <aside class="contenido-sec"></aside>
     </main>
 
     <footer>
@@ -32,4 +65,5 @@
     </footer>
 
 </body>
+
 </html>
