@@ -1,66 +1,100 @@
 * {
     box-sizing: border-box;
-}
-
-body, header, main, footer {
-    background-color: #f2f2f2;
     font-family: 'Roboto', sans-serif;
-    border: 3px red solid;
-    margin: 0.5rem;
 }
 
-main {
-    overflow: auto;
+footer {
+    border: 3px rgb(8, 107, 87) solid;
     min-height: 100px;
 }
 
-main {
-    border: 2px blue solid;
-    min-height: 180px;
-    margin: 0.5rem;
-    height: auto;
-}
-
-.secciones {
-    min-height: 50px;
-    margin: 0.5rem;
-    border: 2px green solid;
-}
-
-img {
-    max-width: 100%;
-}
-
 .header-menubar {
-    border: 2px peru solid;
+    padding: 10px;
     justify-content: center;
     align-items: center;
     display: flex;
-    margin: 0.5rem 0 0.5rem 1rem;
 }
 
-.header-menubar li {
-    border: 2px yellow solid;
-    font-weight: 700;
-    text-align: center;
-    display: inline-block;
-    padding: 0.5rem;
+.header-menubar img {
+    /* border: 3px rgb(8, 107, 87) solid; */
+    width: 200px;
+    margin-right: auto;
 }
 
 .header-menubar ul {
     padding: 0;
-    list-style: none;    
+    list-style: none;
+    display: block;
+    width: max-content;
+    margin-left: auto;
+    margin-right: 10px;
+    /* border: 2px rgb(13, 43, 118) solid; */
 }
 
-a:link {
+.header-menubar li {
+    /* border: 2px yellow solid; */
+    text-align: center;
+    display: inline-block;
+    padding: 0.5rem;
+    margin-left: 10px;
+}
+
+.header-menubar a {    
+    font-family: 'Roboto', sans-serif;
+    width: 210px;
+}
+
+.header-menubar a:link {
     font-style: normal;
     color: black;
     text-decoration: none;
 }
 
 a:visited {
-
     font-style: normal;
     color: black;
     text-decoration: none;
-} */
+}
+
+
+main {
+    overflow: auto;
+    height: max-content;
+}
+
+.secciones {
+    min-height: 350px;
+    border: 2px green solid;
+}
+
+.secciones img {
+    max-width: 100%;
+    display: inline-block;
+}
+
+.secciones:nth-child(1) {
+    border: none;
+    display: flex;
+    padding: 2rem;
+    min-height: 88vh;
+    background: rgb(10, 5, 103);
+    background: linear-gradient(319deg, rgba(10, 5, 103, 1) 0%, rgba(25, 25, 166, 1) 33%, rgba(0, 198, 238, 1) 100%);
+}
+
+.secciones:nth-child(1)>div {
+    /* border: 2px white solid; */
+    max-height: 300px;
+    max-width: 800px;
+    margin: auto;
+    padding: 0.5rem;
+}
+
+.secciones:nth-child(1)>div>p {
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+}
+
+.secciones:nth-child(2) {
+    background-color: rgb(74, 123, 123);
+}
