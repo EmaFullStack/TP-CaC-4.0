@@ -9,12 +9,17 @@ footer {
 }
 
 .header-menubar {
-    padding: 10px;
+    padding: 5px 20px 5px 20px;
     justify-content: center;
     align-items: center;
     display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
     box-shadow: -2px 10px 18px #00000061;
-    position: sticky;
+    background-color: #ffffff;
+
 }
 
 .header-menubar img {
@@ -47,8 +52,8 @@ footer {
 }
 
 .header-menubar a {
-    color: rgb(6, 6, 154);   
-    font-weight: 700; 
+    color: rgb(6, 6, 154);
+    font-weight: 700;
     font-family: 'Roboto', sans-serif;
     width: 210px;
 }
@@ -65,37 +70,40 @@ main {
 
 .secciones {
     min-height: 350px;
-    border: 2px green solid;
+    border: 2px rgb(112, 112, 112) solid;
+    min-height: 100vh;
+    padding: 90px 2rem 2rem;
 }
 
 .secciones img {
     max-width: 100%;
-    display: inline-block;
 }
 
-.secciones:nth-child(1) {
+#inicio {
     border: none;
     display: flex;
-    padding: 2rem;
-    min-height: 88vh;
     background: rgb(10, 5, 103);
     background: linear-gradient(319deg, rgba(10, 5, 103, 1) 0%, rgba(25, 25, 166, 1) 33%, rgba(0, 198, 238, 1) 100%);
+    box-shadow: inset 0px -10px 18px #00000061;
+
 }
 
-.secciones:nth-child(1)>div {
+#inicio>div {
     /* border: 2px white solid; */
     max-height: 300px;
     max-width: 800px;
     margin: auto;
-    padding: 0.5rem;
-}
-
-.secciones:nth-child(1)>div>p {
-    font-weight: 700;
-    color: #fff;
+    padding: 1rem;
     text-align: center;
 }
 
-.secciones:nth-child(2) {
-    background-color: rgb(74, 123, 123);
+#inicio>div>p {
+    font-size: 26px;
+    font-weight: 700;
+    color: #fff;
+}
+
+#servicios {
+    border: none;
+    background-color: rgb(241, 248, 255);
 }
