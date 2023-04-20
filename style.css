@@ -70,9 +70,10 @@ main {
 
 .secciones {
     min-height: 350px;
-    border: 2px rgb(112, 112, 112) solid;
     min-height: 100vh;
     padding: 90px 2rem 2rem;
+    overflow: hidden;
+    border: 2px rgb(112, 112, 112) solid;
 }
 
 .secciones img {
