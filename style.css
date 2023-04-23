@@ -10,10 +10,10 @@ footer {
 
 .header-menubar {
     padding: 5px 20px 5px 20px;
-    justify-content: center;
     align-items: center;
     display: flex;
     position: fixed;
+    z-index: 10;
     left: 0;
     top: 0;
     width: 100vw;
@@ -23,7 +23,6 @@ footer {
 }
 
 .header-menubar img {
-    /* border: 3px rgb(8, 107, 87) solid; */
     width: 200px;
     margin-right: auto;
 }
@@ -35,11 +34,9 @@ footer {
     width: max-content;
     margin-left: auto;
     margin-right: 10px;
-    /* border: 2px rgb(13, 43, 118) solid; */
 }
 
 .header-menubar li {
-    /* border: 2px yellow solid; */
     text-align: center;
     display: inline-block;
     padding: 0.8rem;
@@ -63,35 +60,41 @@ footer {
     text-decoration: none;
 }
 
+.ancla {
+    position: relative;
+    /* border: 2px red solid; */
+    width: 10px;
+    height: 10px;
+    top: -70px;
+}
+
 main {
     overflow: auto;
     height: max-content;
 }
 
 .secciones {
-    min-height: 350px;
     min-height: 100vh;
-    padding: 90px 2rem 2rem;
     overflow: hidden;
-    border: 2px rgb(112, 112, 112) solid;
+    text-align: center;
 }
 
-.secciones img {
-    max-width: 100%;
+.titulos-secciones {
+    font-size: 2em;
+    margin: 3rem auto 1rem auto;
 }
+
+/* primera seccion inicio */
 
 #inicio {
-    border: none;
     display: flex;
     text-align: center;
-    background: rgb(10, 5, 103);
-    background: linear-gradient(319deg, rgba(10, 5, 103, 1) 0%, rgba(25, 25, 166, 1) 33%, rgba(0, 198, 238, 1) 100%);
-    box-shadow: inset 0px -10px 18px #00000061;
-
+    background: rgb(54, 50, 152);
+    background: linear-gradient(4deg, rgba(54, 50, 152, 1) 0%, rgba(66, 66, 185, 1) 33%, rgba(99, 194, 233, 1) 100%);
+    box-shadow: inset 0px -10px 12px 0px rgba(0, 0, 0, 0.34);
 }
 
 #inicio>div {
-    /* border: 2px white solid; */
     max-height: max-content;
     max-width: 800px;
     margin: auto;
@@ -107,14 +110,16 @@ main {
     color: #fff;
 }
 
-#servicios {
-    text-align: center;
-    border: none;
+/* segunda seccion servicios */
+
+#servicios,
+#nosotros {
+    min-height: 550px;
+    max-height: fit-content;
 }
 
 #servicios>h2 {
-    font-size: 2em;
-    margin: 2rem auto;
+    color: navy;
 }
 
 .grid-container {
@@ -123,23 +128,64 @@ main {
     grid-template-columns: auto auto auto auto;
     grid-template-rows: auto;
     gap: 1.5rem;
+    padding: 2rem;
 }
 
 .grid-item {
     min-height: 300px;
     min-width: 280px;
-    color: white;
+    max-width: 350px;
     padding: 2rem;
-    border-radius: 20px; 
-    background: linear-gradient(319deg, rgb(17, 12, 120) 0%, rgba(25, 25, 166, 1) 33%, rgba(0, 198, 238, 1) 100%);
+    border-radius: 20px;
+}
+
+.servicios-item {
+    color: white;
+    background: rgb(54, 50, 152);
+    background: linear-gradient(4deg, rgba(54, 50, 152, 1) 0%, rgba(66, 66, 185, 1) 33%, rgba(99, 194, 233, 1) 100%);
 }
 
 .icon-servicios {
-    width: 30px;
+    fill: white;
+    width: 35px;
     margin: 1.5em;
 }
 
 .titulo-servicio {
     font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: auto auto
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: auto
+    }
+}
+
+/* tercera sección Nosotros (prop. de grid en seccion 2) */
+
+#nosotros {
+    color: white;
+    box-shadow: inset 0px 10px 15px 0px rgba(0, 0, 0, 0.356);
+    background: rgb(54, 50, 152);
+    background: linear-gradient(4deg, rgba(54, 50, 152, 1) 0%, rgba(66, 66, 185, 1) 33%, rgba(99, 194, 233, 1) 100%);
+}
+
+#nosotros>h3 {
+    margin-bottom: 0px;
+}
+
+.nosotros-item>img {
+    border: #fff 20px solid;
+    padding: 0px;
+    width: 170px;
+    border-radius: 100px;
+    background-color: white;
     margin-bottom: 20px;
 }
