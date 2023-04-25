@@ -3,10 +3,33 @@
     font-family: 'Roboto', sans-serif;
 }
 
-footer {
-    border: 3px rgb(8, 107, 87) solid;
-    min-height: 100px;
+/* Estilos Generales */
+
+.ancla {
+    position: relative;
+    /* border: 2px red solid; */
+    width: 10px;
+    height: 10px;
+    top: -70px;
 }
+
+main {
+    overflow: auto;
+    height: max-content;
+}
+
+.secciones {
+    min-height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+.titulos-secciones {
+    font-size: 2em;
+    margin: 3rem auto 1rem auto;
+}
+
+/* Header y Barra de Navegación */
 
 .header-menubar {
     padding: 5px 20px 5px 20px;
@@ -60,28 +83,8 @@ footer {
     text-decoration: none;
 }
 
-.ancla {
-    position: relative;
-    /* border: 2px red solid; */
-    width: 10px;
-    height: 10px;
-    top: -70px;
-}
-
-main {
-    overflow: auto;
-    height: max-content;
-}
-
-.secciones {
-    min-height: 100vh;
-    overflow: hidden;
-    text-align: center;
-}
-
-.titulos-secciones {
-    font-size: 2em;
-    margin: 3rem auto 1rem auto;
+@media only screen and (max-width: 650px) {
+   
 }
 
 /* primera seccion inicio */
@@ -294,4 +297,11 @@ input::-webkit-input-placeholder {
 
 #trucazo {
     opacity: 0;
+}
+
+/* Footer */
+
+footer {
+    border: 3px rgb(8, 107, 87) solid;
+    min-height: 100px;
 }
