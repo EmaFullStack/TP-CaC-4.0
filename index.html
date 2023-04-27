@@ -27,7 +27,6 @@
                     <a href="#nosotros-ancla"><li>Nosotros</li></a>
                     <a href="#contacto-ancla"><li>Contacto</li></a>
                 </ul>
-               
             </nav>
         </header>
 
@@ -128,13 +127,31 @@
                 <div class="contenedor-contacto">
                     <div class="item-contacto">
                         <h4 class="tag">ESCRIBINOS</h4>
-                        <form id="form" action="" class="form">
-                            <label for="name">Nombre Completo <span>*</span></label>
-                            <input name="name" required type="text" id="name" placeholder="Juan Perez" />
-                            <label for="email">Correo electrónico <span>*</span></label>
-                            <input name="email" type="text" id="email" required placeholder="tuemail@gmail.com" />
-                            <label for="message">Mensaje</label>
+                        <form id="form-contacto" class="form">
+                            <label for="name">Nombre Completo <span>*</span><span id="name-invalid"></span></label>
+                            <input
+                                onfocusout="check_inputs('name')"
+                                onkeydown="clear_error('name')"
+                                name="name"
+                                required
+                                type="text"
+                                id="name"
+                                placeholder="Juan Perez"
+                            />
+                            <label for="email">Correo electrónico <span>*</span> <span id="mail-invalid"></span></label>
+                            <input
+                                onfocusout="check_inputs('mail')"
+                                onkeyup="clear_error('mail')"
+                                name="email"
+                                type="text"
+                                id="email"
+                                required
+                                placeholder="tuemail@gmail.com"
+                            />
+                            <label for="message">Mensaje <span id="text-invalid"></span></label>
                             <textarea
+                                onfocusout="check_inputs('text')"
+                                onkeyup="clear_error('text')"
                                 id="message"
                                 name="message"
                                 id=""
@@ -143,9 +160,12 @@
                                 placeholder="Tu consulta"
                                 maxlength="300"
                             ></textarea>
-                            <button type="submit" class="btn primary full">enviar mensaje</button>
+                            <div id="submit-button-container">
+                                <a id="submit-button" onclick="check_all_inputs()" class="btn primary full"
+                                    >Enviar mensaje</a
+                                >
+                            </div>
                         </form>
-                        <a href="mailto:me@leonidasesteban.com" id="trucazo"></a>
                     </div>
 
                     <div class="item-contacto">
@@ -164,11 +184,34 @@
                 </div>
             </section>
         </main>
+        <footer>
+            <div class="sect">
+                <ul>
+                    <li><img id="footer-logo" src="./img/iconlogo-white.png" alt="" /></li>
+                    <li>
+                        <a class="footer-text-link" href="#"><i class="fa-solid fa-align-left"></i> Nuestra historia</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sect">
+                <ul>
+                    <li>
+                        <a class="footer-text-link" href="#"><i class="fa-solid fa-envelope"></i> Departamentos</a>
+                    </li>
+                    <li>
+                        <a class="footer-text-link" href="#"
+                            ><i class="fa-solid fa-house-laptop"></i> Trabaja con nosotros</a
+                        >
+                    </li>
+                </ul>
+            </div>
+            <div id="social-container" class="sect">
+                <a class="social" href="https://www.instagram.com/corewd/"><i class="fa-brands fa-instagram"></i></a
+                ><a class="social" href="https://twitter.com/CoreWebDesignG"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </footer>
 
-        <footer></footer>
-
-
-
-        <script src="./js/burger-menu.js"></script>
+        <script src="./js/form_validation.js"></script>
+        <script src="./js/burger_menu.js"></script>
     </body>
 </html>

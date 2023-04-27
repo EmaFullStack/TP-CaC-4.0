@@ -256,8 +256,8 @@ main {
 }
 
 #contacto iframe {
-    /* width: 100%; */
-    /* height: 300px; */
+    width: 100%;
+    height: 300px;
     padding: 1em;
 }
 
@@ -296,6 +296,7 @@ h5 {
 .form {
     max-inline-size: 500px;
     margin: auto;
+    text-align: left;
 }
 
 .form label {
@@ -309,14 +310,20 @@ h5 {
     color: #da1414;
 }
 
+.form input.error,
+.form textarea.error {
+    border-color: red;
+}
+
 .form input,
 .form textarea {
+    transition: border-color 1s;
     box-sizing: border-box;
     width: 100%;
     font-size: 1rem;
     padding: 0.8em;
     border-radius: 0.5em;
-    border: 1px solid #858c94;
+    border: 2px solid navy;
 }
 
 .form textarea {
@@ -329,17 +336,70 @@ input::-webkit-input-placeholder {
     color: #0f0a0a88;
 }
 
+#submit-button-container {
+    text-align: right;
+}
+#submit-button {
+    transition: opacity .2s;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border-radius: 10px;
+    background: linear-gradient(4deg, rgba(54, 50, 152, 1) 0%, rgba(66, 66, 185, 1) 33%, rgba(99, 194, 233, 1) 100%);
+    color:white;
+}
+#submit-button:hover{
+    opacity: .9;
+}
 .contact {
     margin-block-end: 5em;
-}
-
-#trucazo {
-    opacity: 0;
 }
 
 /* Footer */
 
 footer {
-    border: 3px rgb(8, 107, 87) solid;
+    /* border: 3px rgb(8, 107, 87) solid; */
     min-height: 100px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: flex-end;
+
+    background: linear-gradient(4deg, rgba(54, 50, 152, 1) 0%, rgba(66, 66, 185, 1) 33%, rgba(99, 194, 233, 1) 100%);
+
+    padding: 1rem;
+}
+footer .sect:nth-child(2) {
+    align-self: flex-start;
+}
+
+#social-container {
+    text-align: right;
+}
+#social-container > .sect {
+    margin-top: 1rem;
+}
+#footer-logo {
+    max-width: 30%;
+}
+.social {
+    color: white;
+    font-size: 3rem;
+    margin-right: 1rem;
+}
+
+/* footer li {
+    color: white !important;
+} */
+footer li > a {
+    color: white !important;
+}
+.footer-text-link {
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 0.8em;
+}
+
+@media only screen and (max-width: 450px) {
+    #footer-logo {
+        max-width: 80%;
+    }
 }
