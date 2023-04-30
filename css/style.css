@@ -32,7 +32,6 @@ main {
 /* Header y Barra de Navegación */
 
 .header-menubar {
-    /* 5px top y bottom -- 20px izquierda y derecha */
     padding: 5px 20px;
     align-items: center;
     display: flex;
@@ -82,8 +81,9 @@ main {
     font-style: normal;
     text-decoration: none;
 }
-/* Esconde el boton del menu cuando esta en pantallas grandes */
+
 #burger-menu-button {
+    /* Esconde el boton del menu cuando esta en pantallas grandes */
     display: none;
 }
 
@@ -208,7 +208,6 @@ main {
 }
 
 .icon-servicios {
-    fill: white;
     width: 35px;
     margin: 1.5em;
 }
@@ -358,16 +357,14 @@ input::-webkit-input-placeholder {
 /* Footer */
 
 footer {
-    /* border: 3px rgb(8, 107, 87) solid; */
     min-height: 100px;
     display: grid;
     grid-template-columns: auto auto auto;
     align-items: flex-end;
-
     background: linear-gradient(4deg, rgba(54, 50, 152, 1) 0%, rgba(66, 66, 185, 1) 33%, rgba(99, 194, 233, 1) 100%);
-
     padding: 1rem;
 }
+
 footer .sect:nth-child(2) {
     align-self: flex-start;
 }
@@ -390,6 +387,7 @@ footer .sect:nth-child(2) {
 /* footer li {
     color: white !important;
 } */
+
 footer li > a {
     color: white !important;
 }
