@@ -133,6 +133,13 @@ main {
     transition: box-shadow 0.5s, transform 0.5s, translate 0.5s, color 0.5s;
 }
 
+.grid-item:hover {
+    box-shadow: 0 4px 4px rgba(63, 63, 63, 0.468);
+    transform: scale(1.015);
+    translate: 0px -5px;
+}
+
+
 @media only screen and (max-width: 1200px) {
     .grid-container {
         grid-template-columns: auto auto
@@ -155,12 +162,6 @@ main {
 #servicios>h2 {
     color: navy;
     margin-bottom: 2.4rem;
-}
-
-.grid-item:hover {
-    box-shadow: 0 4px 4px rgba(63, 63, 63, 0.468);
-    transform: scale(1.015);
-    translate: 0px -5px;
 }
 
 .servicios-item {
