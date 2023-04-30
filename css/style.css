@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 /* Estilos Generales */
@@ -32,7 +32,8 @@ main {
 /* Header y Barra de Navegación */
 
 .header-menubar {
-    padding: 5px 20px 5px 20px;
+    /* 5px top y bottom -- 20px izquierda y derecha */
+    padding: 5px 20px;
     align-items: center;
     display: flex;
     position: fixed;
@@ -42,7 +43,6 @@ main {
     width: 100vw;
     box-shadow: -2px 10px 18px #00000061;
     background-color: #ffffff;
-
 }
 
 .header-menubar img {
@@ -74,7 +74,7 @@ main {
 .header-menubar a {
     color: rgb(6, 6, 154);
     font-weight: 700;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     width: 210px;
 }
 
@@ -82,9 +82,46 @@ main {
     font-style: normal;
     text-decoration: none;
 }
+/* Esconde el boton del menu cuando esta en pantallas grandes */
+#burger-menu-button {
+    display: none;
+}
 
 @media only screen and (max-width: 650px) {
-   
+    .header-menubar {
+        flex-wrap: wrap;
+    }
+
+    #burger-menu-button {
+        font-size: 1.5rem;
+        display: block;
+        margin-left: auto;
+        margin-right: 1rem;
+    }
+    #navigation {
+        transition: max-height 1s, border-bottom 0.7s;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        border-bottom: 0px solid transparent;
+    }
+
+    #navigation.active {
+        max-height: 200px;
+    }
+    #navigation li {
+        display: inline-block;
+        text-align: center;
+        width: max-content;
+        margin: 0 auto;
+    }
+    #navigation li,
+    #navigation a {
+        width: 100%;
+    }
 }
 
 /* primera seccion inicio */
@@ -97,18 +134,18 @@ main {
     box-shadow: inset 0px -10px 12px 0px rgba(0, 0, 0, 0.34);
 }
 
-#inicio>div {
+#inicio > div {
     max-height: max-content;
     max-width: 800px;
     margin: auto;
     padding: 1rem;
 }
 
-#inicio>div>img {
+#inicio > div > img {
     max-width: 90%;
 }
 
-#inicio>div>p {
+#inicio > div > p {
     font-size: 1.2rem;
     color: #fff;
 }
@@ -142,13 +179,13 @@ main {
 
 @media only screen and (max-width: 1200px) {
     .grid-container {
-        grid-template-columns: auto auto
+        grid-template-columns: auto auto;
     }
 }
 
 @media only screen and (max-width: 768px) {
     .grid-container {
-        grid-template-columns: auto
+        grid-template-columns: auto;
     }
 }
 
@@ -159,7 +196,7 @@ main {
     max-height: fit-content;
 }
 
-#servicios>h2 {
+#servicios > h2 {
     color: navy;
     margin-bottom: 2.4rem;
 }
@@ -192,7 +229,7 @@ main {
     background: linear-gradient(4deg, rgba(54, 50, 152, 1) 0%, rgba(66, 66, 185, 1) 33%, rgba(99, 194, 233, 1) 100%);
 }
 
-#nosotros>h3 {
+#nosotros > h3 {
     color: white;
     margin-bottom: 30px;
 }
@@ -206,7 +243,7 @@ main {
     color: navy;
 }
 
-.nosotros-item>img {
+.nosotros-item > img {
     width: 130px;
     background-color: white;
     margin-bottom: 20px;
@@ -214,7 +251,7 @@ main {
 
 /* Cuarta Seccion Contacto */
 
-#contacto{
+#contacto {
     box-shadow: 0px -10px 10px #3c3c3c5f;
     color: navy;
 }
@@ -228,7 +265,7 @@ main {
 .contenedor-contacto {
     display: grid;
     grid-template-columns: auto auto;
-    width: max-content;
+    max-width: max-content;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
@@ -242,11 +279,12 @@ main {
 
 @media only screen and (max-width: 768px) {
     .contenedor-contacto {
-        grid-template-columns: auto
+        grid-template-columns: auto;
     }
 }
 
-h4, h5 {
+h4,
+h5 {
     font-weight: 600;
 }
 
@@ -259,27 +297,34 @@ h4, h5 {
 .form {
     max-inline-size: 500px;
     margin: auto;
+    text-align: left;
 }
 
 .form label {
     display: block;
     margin-block-start: 1em;
-    margin-block-end: .5em;
-    padding-inline-start: .5em;
+    margin-block-end: 0.5em;
+    padding-inline-start: 0.5em;
 }
 
 .form label span {
-    color: #DA1414;
+    color: #da1414;
+}
+
+.form input.error,
+.form textarea.error {
+    border-color: red;
 }
 
 .form input,
 .form textarea {
+    transition: border-color 1s;
     box-sizing: border-box;
     width: 100%;
     font-size: 1rem;
-    padding: .8em;
-    border-radius: .5em;
-    border: 1px solid #858C94;
+    padding: 0.8em;
+    border-radius: 0.5em;
+    border: 2px solid navy;
 }
 
 .form textarea {
@@ -289,20 +334,73 @@ h4, h5 {
 }
 
 input::-webkit-input-placeholder {
-    color: #0F0A0A88;
+    color: #0f0a0a88;
 }
 
+#submit-button-container {
+    text-align: right;
+}
+#submit-button {
+    transition: opacity .2s;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border-radius: 10px;
+    background: linear-gradient(4deg, rgba(54, 50, 152, 1) 0%, rgba(66, 66, 185, 1) 33%, rgba(99, 194, 233, 1) 100%);
+    color:white;
+}
+#submit-button:hover{
+    opacity: .9;
+}
 .contact {
     margin-block-end: 5em;
-}
-
-#trucazo {
-    opacity: 0;
 }
 
 /* Footer */
 
 footer {
-    border: 3px rgb(8, 107, 87) solid;
+    /* border: 3px rgb(8, 107, 87) solid; */
     min-height: 100px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: flex-end;
+
+    background: linear-gradient(4deg, rgba(54, 50, 152, 1) 0%, rgba(66, 66, 185, 1) 33%, rgba(99, 194, 233, 1) 100%);
+
+    padding: 1rem;
+}
+footer .sect:nth-child(2) {
+    align-self: flex-start;
+}
+
+#social-container {
+    text-align: right;
+}
+#social-container > .sect {
+    margin-top: 1rem;
+}
+#footer-logo {
+    max-width: 30%;
+}
+.social {
+    color: white;
+    font-size: 3rem;
+    margin-right: 1rem;
+}
+
+/* footer li {
+    color: white !important;
+} */
+footer li > a {
+    color: white !important;
+}
+.footer-text-link {
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 0.8em;
+}
+
+@media only screen and (max-width: 450px) {
+    #footer-logo {
+        max-width: 80%;
+    }
 }
