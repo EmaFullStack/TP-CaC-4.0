@@ -359,21 +359,38 @@ input::-webkit-input-placeholder {
 
 footer {
     color: white;
-    max-height: 120px;
+    height: 80px;
     text-align: center;
     background: linear-gradient(4deg, rgba(54, 50, 152, 1) 0%, rgba(66, 66, 185, 1) 33%, rgba(99, 194, 233, 1) 100%);
     padding: 1rem;
 }
 
+footer div {
+    height: 30px;
+}
+
 .social {
+    position: relative;
+    color: rgb(231, 228, 252);
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    box-shadow: none;
+    top: 0;
+    transition: top 300ms, color 300ms,  margin-right 300ms, margin-left 300ms;
+}
+
+.social:hover { 
+    top:-2px;   
     color: white;
-    font-size: 2rem;
-    margin-right: 1rem;
+    margin-right: 0.7rem;
+    margin-left: 0.7rem;
 }
 
 footer p {
+    margin-top: 10px;
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 10px;
-    height: fit-content;
+    height: 20px;
     font-size: small;
 }
