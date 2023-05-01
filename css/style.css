@@ -10,7 +10,7 @@
     /* border: 2px red solid; */
     width: 10px;
     height: 10px;
-    top: -70px;
+    top: -60px;
 }
 
 main {
@@ -82,7 +82,8 @@ main {
     text-decoration: none;
 }
 
-#burger-menu-button {
+#burger-menu-button {    
+    color: rgb(79, 79, 201);
     /* Esconde el boton del menu cuando esta en pantallas grandes */
     display: none;
 }
@@ -243,8 +244,7 @@ main {
 }
 
 .nosotros-item > img {
-    width: 130px;
-    background-color: white;
+    width: 120px;
     margin-bottom: 20px;
 }
 
@@ -271,8 +271,9 @@ main {
 }
 
 .item-contacto {
-    min-width: 300px;
-    max-width: 500px;
+
+    min-width: 400px;
+    max-width: 450px;
     padding: 2rem;
 }
 
@@ -337,7 +338,7 @@ input::-webkit-input-placeholder {
 }
 
 #submit-button-container {
-    text-align: right;
+    text-align: center;
 }
 #submit-button {
     transition: opacity .2s;
@@ -357,48 +358,22 @@ input::-webkit-input-placeholder {
 /* Footer */
 
 footer {
-    min-height: 100px;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    align-items: flex-end;
+    color: white;
+    max-height: 120px;
+    text-align: center;
     background: linear-gradient(4deg, rgba(54, 50, 152, 1) 0%, rgba(66, 66, 185, 1) 33%, rgba(99, 194, 233, 1) 100%);
     padding: 1rem;
 }
 
-footer .sect:nth-child(2) {
-    align-self: flex-start;
-}
-
-#social-container {
-    text-align: right;
-}
-#social-container > .sect {
-    margin-top: 1rem;
-}
-#footer-logo {
-    max-width: 30%;
-}
 .social {
     color: white;
-    font-size: 3rem;
+    font-size: 2rem;
     margin-right: 1rem;
 }
 
-/* footer li {
-    color: white !important;
-} */
-
-footer li > a {
-    color: white !important;
-}
-.footer-text-link {
-    text-decoration: none;
-    font-weight: bolder;
-    font-size: 0.8em;
-}
-
-@media only screen and (max-width: 450px) {
-    #footer-logo {
-        max-width: 80%;
-    }
+footer p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    height: fit-content;
+    font-size: small;
 }
