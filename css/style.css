@@ -82,7 +82,7 @@ main {
     text-decoration: none;
 }
 
-#burger-menu-button {    
+#burger-menu-button {
     color: rgb(79, 79, 201);
     /* Esconde el boton del menu cuando esta en pantallas grandes */
     display: none;
@@ -181,7 +181,6 @@ main {
     transform: scale(1.015);
     translate: 0px -5px;
 }
-
 
 @media only screen and (max-width: 1200px) {
     .grid-container {
@@ -302,10 +301,32 @@ h5 {
     line-height: 1.5em;
 }
 
+#gracias {
+    display: none;
+    margin: 0 1rem;
+    transition: opacity 0.5s;
+    font-size: 2rem;
+}
+#gracias.enabled1 {
+    display:initial;
+    opacity: 0;
+}
+#gracias.enabled2 {
+    display:initial;
+    opacity: 1;
+}
 .form {
+    transition: opacity .5s;
     max-inline-size: 500px;
     margin: auto;
     text-align: left;
+}
+
+.form.disabled1 {
+    opacity: 0;
+}
+.form.disabled2 {
+    display: none;
 }
 
 .form label {
@@ -349,16 +370,21 @@ input::-webkit-input-placeholder {
     text-align: center;
 }
 #submit-button {
-    transition: opacity .2s;
+    transition: opacity 0.2s;
     padding: 1rem 2rem;
     cursor: pointer;
     border-radius: 10px;
     background: linear-gradient(4deg, rgba(54, 50, 152, 1) 0%, rgba(66, 66, 185, 1) 33%, rgba(99, 194, 233, 1) 100%);
-    color:white;
+    color: white;
 }
-#submit-button:hover{
-    opacity: .9;
+
+#submit-button:hover {
+    opacity: 0.9;
 }
+#submit-button.error {
+    background: linear-gradient(4deg, rgb(152, 50, 50) 0%, rgb(185, 66, 66) 33%, rgb(233, 99, 150) 100%);
+}
+
 .contact {
     margin-block-end: 5em;
 }
@@ -389,8 +415,8 @@ footer div {
     transition: text-shadow 300ms, top 300ms, color 300ms;
 }
 
-.social:hover { 
-    top:-2px;   
+.social:hover {
+    top: -2px;
     color: white;
     text-shadow: 0px 2px 2px #17153334;
 }
