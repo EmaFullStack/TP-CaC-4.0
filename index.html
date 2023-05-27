@@ -127,6 +127,12 @@
                 <div class="contenedor-contacto">
                     <div class="item-contacto">
                         <h4 class="tag">ESCRIBINOS</h4>
+                        <div id="gracias" class="disabled">
+                            <h3>
+                                Gracias por escribirnos! <br />
+                                Recibimos tu mail y te estaremos respondiendo en breve!
+                            </h3>
+                        </div>
                         <form id="form-contacto" class="form">
                             <label for="name">Nombre Completo <span>*</span><span id="name-invalid"></span></label>
                             <input
@@ -179,6 +185,8 @@
                         <p>
                             Encontranos en "La Maquinita" Coworking, en días hábiles de 10hs a 12hs y por la tarde de
                             15hs a 17hs.
+                            <br />
+                            <b style="font-weight: 700" id="feriados"></b>
                         </p>
                     </div>
                 </div>
@@ -197,6 +205,6 @@
 
         <script src="./js/form_validation.js"></script>
         <script src="./js/burger_menu.js"></script>
-
+        <script src="./js/time_api.js"></script>
     </body>
 </html>
