@@ -135,8 +135,8 @@ main {
 #inicio {
     display: flex;
     text-align: center;
-    background: rgb(54, 50, 152);
-    background: linear-gradient(4deg, rgba(54, 50, 152, 1) 0%, rgba(66, 66, 185, 1) 33%, rgba(99, 194, 233, 1) 100%);
+    background-image: url(../img/fondo-abstract.jpg);
+    background-size: cover;
     box-shadow: inset 0px -10px 12px 0px rgba(0, 0, 0, 0.34);
 }
 
@@ -209,10 +209,24 @@ main {
 
 .servicios-item {
     color: white;
-    background: rgb(54, 50, 152);
-    background: linear-gradient(4deg, rgba(54, 50, 152, 1) 0%, rgba(66, 66, 185, 1) 33%, rgba(99, 194, 233, 1) 100%);
 }
 
+.servicios-item:nth-child(1) {
+    background-image: url(../img/mini-fondo-abstract1.png);
+    background-size: cover;
+}
+.servicios-item:nth-child(2) {
+    background-image: url(../img/mini-fondo-abstract2.png);
+    background-size: cover;
+}
+.servicios-item:nth-child(3) {
+    background-image: url(../img/mini-fondo-abstract3.png);
+    background-size: cover;
+}
+.servicios-item:nth-child(4) {
+    background-image: url(../img/mini-fondo-abstract4.png);
+    background-size: cover;
+}
 .icon-servicios {
     width: 35px;
     margin: 1.5em;
@@ -230,8 +244,8 @@ main {
     min-height: 550px;
     max-height: fit-content;
     box-shadow: inset 0px 10px 15px 0px rgba(0, 0, 0, 0.356);
-    background: rgb(54, 50, 152);
-    background: linear-gradient(4deg, rgba(54, 50, 152, 1) 0%, rgba(66, 66, 185, 1) 33%, rgba(99, 194, 233, 1) 100%);
+    background-image: url(../img/fondo-abstract.jpg);
+    background-size: cover;
 }
 
 #nosotros > h3 {
@@ -353,7 +367,7 @@ input::-webkit-input-placeholder {
     padding: 1rem 2rem;
     cursor: pointer;
     border-radius: 10px;
-    background: linear-gradient(4deg, rgba(54, 50, 152, 1) 0%, rgba(66, 66, 185, 1) 33%, rgba(99, 194, 233, 1) 100%);
+    background: linear-gradient(4deg, rgb(50 9 51) 0%, rgb(45 11 62) 33%, rgb(79, 79, 201) 100%);
     color:white;
 }
 #submit-button:hover{
@@ -369,7 +383,8 @@ footer {
     color: white;
     height: 80px;
     text-align: center;
-    background: linear-gradient(4deg, rgba(54, 50, 152, 1) 0%, rgba(66, 66, 185, 1) 33%, rgba(99, 194, 233, 1) 100%);
+    background-image: url(../img/fondo-abstract-footer.png);
+    background-size: cover;
     padding: 1rem;
 }
 
