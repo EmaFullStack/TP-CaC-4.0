@@ -388,7 +388,7 @@ input::-webkit-input-placeholder {
     padding: 1rem 2rem;
     cursor: pointer;
     border-radius: 10px;
-    background: linear-gradient(4deg, rgba(54, 50, 152, 1) 0%, rgba(66, 66, 185, 1) 33%, rgba(99, 194, 233, 1) 100%);
+    background: linear-gradient(4deg, rgb(48 11 55) 0%, rgb(35 29 71) 33%, rgb(66 127 202) 100%);
     color: white;
 }
 
