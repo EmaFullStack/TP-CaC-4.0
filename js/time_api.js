@@ -6,7 +6,7 @@ async function feriados() {
     const year = d.getFullYear();
     const day = d.getDay();
     // month_number = 1;
-    const response = await fetch(`http://nolaborables.com.ar/api/v2/feriados/${year}?formato=mensual`);
+    const response = await fetch(`https://nolaborables.com.ar/api/v2/feriados/${year}?formato=mensual`);
     const jsonData = await response.json();
 
     const two_months = [jsonData[month_number], jsonData[month_number + 1]];
